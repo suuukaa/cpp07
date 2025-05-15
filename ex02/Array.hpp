@@ -2,11 +2,13 @@
 #define ARRAY_HPP
 
 #include <iostream>
+#include <cstdlib>
 
 template <typename T>
 class Array{
 
-    unsigned int len;
+    unsigned int    len;
+    T*              arr;
 
     public :
         Array();
@@ -16,9 +18,9 @@ class Array{
         ~Array();
 
         T& operator[](unsigned int idx);
-        const T& operator[](unsigned int index) const;
+        const T& operator[](unsigned int idx) const;
         unsigned int size() const;
-}
+};
 
 #include "Array.tpp"
 
